@@ -1,0 +1,18 @@
+{
+  "name": "ui-testing-test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "cypress:open": "cypress open",
+    "html-report": "cypress run --spec cypress/e2e/1-ui-testing --browser chrome --headed"
+  },
+  "author": "dio",
+  "license": "ISC",
+  "devDependencies": {
+    "cypress": "^15.3.0",
+    "cypress-mochawesome-reporter": "^4.0.2",
+    "cypress-xpath": "^2.0.1",
+    "dotenv": "^17.2.2"
+  }
+}
