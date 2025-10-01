@@ -6,3 +6,5 @@ node_modules/
 reports/
 # Test screenshot
 screenshots/
+# Cypress generated files
+cypress/downloads/
