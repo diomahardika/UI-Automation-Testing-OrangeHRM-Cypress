@@ -62,9 +62,7 @@ const logoutUser = () => {
   cy.xpath(leaveLocators.logout).click();
 };
 
-
 const leavePage = {
-
   menu() {
     cy.xpath(leaveLocators.menu).click();
   },
@@ -125,13 +123,22 @@ const leavePage = {
     logoutUser();
   },
 
-  statusLeave() {
+  statusLeave(firstName, middleName, lastName) {
     cy.xpath(leaveLocators.menu).click();
     cy.xpath(leaveLocators.myLeave).click();
-    //assertion pastikan status memiliki text taken dan scheduled
+
+    // pastikan ada data 
+    cy.contains("Record Found").should("be.visible");
+
+    // cek apakah data sesuai dengan request
     cy.xpath(leaveLocators.table)
-      .should("contain.text", "Taken")
+      .should("be.visible")
+      .and("contain.text", firstName, middleName, lastName) 
+      .and("contain.text", LEAVE_CONSTANTS.LEAVE_TYPE) 
       .and("contain.text", "Scheduled");
+
+    // Check apakah ada button cancel
+    cy.xpath(leaveLocators.cancel).should("be.visible");
   },
 
   negatifCase() {
@@ -142,7 +149,7 @@ const leavePage = {
     fillDateAndDuration();
 
     cy.xpath(leaveLocators.buttonSave).click();
-    
+
     // assertion pastikan muncul notifikasi Failed to Submit
     cy.contains(LEAVE_CONSTANTS.MESSAGES.FAILED_SUBMIT).should("be.visible");
 

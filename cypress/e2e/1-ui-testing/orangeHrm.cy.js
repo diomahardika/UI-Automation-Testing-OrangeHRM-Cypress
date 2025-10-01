@@ -43,7 +43,7 @@ describe("Add New Employee and User Account", () => {
     cy.contains("Successfully Saved").should("be.visible");
     cy.contains("Personal Details").should("be.visible");
   });
-  it.only("Negative Case - Should show an error when adding an employee with empty required fields", () => {
+  it("Negative Case - Should show an error when adding an employee with empty required fields", () => {
     employeePage.menu();
     employeePage.addEmployee();
 
@@ -100,7 +100,11 @@ describe("Leave Request and Approval Cycle", () => {
     // --- Langkah: Karyawan Baru Melihat Status Cuti ---
     loginPage.loginAsEmployee(employeeData.username, employeeData.password);
 
-    leavePage.statusLeave();
+    leavePage.statusLeave(
+      employeeData.firstName,
+      employeeData.middleName,
+      employeeData.lastName
+    );
   });
 
   it("Negative Case - Should show error when requesting duplicate leave dates", () => {

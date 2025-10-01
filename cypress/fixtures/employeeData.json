@@ -1,11 +1,9 @@
 {
-  "firstName": "Employee5",
-  "middleName": "Contoh",
-  "lastName": "Data",
-  "employeeId": "5555",
-  "username": "TestUI2026",
-  "password": "TestUI2026",
+  "firstName": "Maria",
+  "middleName": "Elena",
+  "lastName": "Garcia",
+  "employeeId": "2002",
+  "username": "mariagarcia2025",
+  "password": "MariaPass456",
   "unvalidName": "Employee Fiktif"
-
 }
-

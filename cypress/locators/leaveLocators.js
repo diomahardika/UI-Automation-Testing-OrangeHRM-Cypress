@@ -9,6 +9,7 @@ export const leaveLocators = {
   totalEntitilement: '(//input[@class="oxd-input oxd-input--active"])[2]',
   buttonSave: '//button[@type="submit"]',
   confirm: '(//button[@type="button"])[6]',
+  cancel: '(//button[@type="button"])[4]',
 
   apply:'//a[contains(text(),"Apply")]',
   fromDate:'(//input[@placeholder="yyyy-dd-mm"])[1]',
@@ -18,7 +19,7 @@ export const leaveLocators = {
   leaveList:'//a[contains(text(),"Leave List")]',
   approve:'(//button[@type="button"])[5]',
   myLeave:'//a[contains(text(),"My Leave")]',
-  tableRow:'(//div[contains(@role,"rowgroup")])[2]',
-  tableCell:'(//div[@role="cell"])[7]',
-  table:'(//div[contains(@role,"rowgroup")])[2]//div[@role="cell"][7]'
+  table:'(//div[contains(@role,"rowgroup")])[2]',
+  // tableCell:'(//div[@role="cell"])[7]',
+  // table:'(//div[contains(@role,"rowgroup")])[2]//div[@role="cell"][7]'
 };
