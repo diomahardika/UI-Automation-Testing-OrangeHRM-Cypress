@@ -103,7 +103,7 @@ describe("Leave Request and Approval Cycle", () => {
     leavePage.statusLeave();
   });
 
-  it("Negative Case - Should show an error when requesting leave with insufficient balance", () => {
+  it("Negative Case - Should show error when requesting duplicate leave dates", () => {
     loginPage.loginAsEmployee(employeeData.username, employeeData.password);
 
     leavePage.negatifCase();
