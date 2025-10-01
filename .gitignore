@@ -2,9 +2,7 @@
 .env
 # Node modules
 node_modules/
-# Test reports
-reports/
-# Test screenshot
-screenshots/
 # Cypress generated files
+cypress/screenshots/
+cypress/reports/
 cypress/downloads/
